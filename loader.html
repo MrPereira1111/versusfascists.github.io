@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Loader</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    .button-container {
+      margin: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100vw;
+      height: 80vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Pick a Game to Play!</h1>
+
+  <div class="button-container">
+    <!-- ✅ iframe-compatible games -->
+    <button onclick="loadInFrame('https://www.gameflare.com/online-game/dumb-ways-to-die-original/')">Dumb Ways to Die</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/sprite-box')">Sprite Box</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/mu-complex-episode-one')">MU Complex</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/switch-or-not')">Switch or Not</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/evolution-simulation')">Evolution Simulation</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/worlds-history-simulator')">World History Simulator</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/super-mario-maker-4-a-platformer-creator')">Mario Maker 4</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/mario-maker-mit-scratch')">MIT Mario Maker</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/my-super-tiny-market')">Tiny Market</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/ball-sort-puzzle')">Ball Sort Puzzle</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/wordler')">Wordler</button>
+    <button onclick="loadInFrame('https://kbhgames.com/game/happy-filled-glass-2')">Happy Glass 2</button>
+
+    <!-- 🌐 Games that must open in a new tab -->
+    <button onclick="openNewTab('https://www.culinaryschools.org/kids-games/coffee-shop/')">Coffee Shop 🌐</button>
+    <button onclick="openNewTab('https://www.mortgagecalculator.org/money-games/code-monkey/')">Code Monkey 🌐</button>
+    <button onclick="openNewTab('https://studio.code.org/projects/public')">Code.org Projects 🌐</button>
+    <button onclick="openNewTab('https://studio.code.org/projects/gamelab/RvslcS11SI02udAxsrl-rmcfYbVE6RFGH3MVg8ynSNc/edit')">Code.org GameLab 🌐</button>
+    <button onclick="openNewTab('https://checkio.org/')">CheckiO 🌐</button>
+    <button onclick="openNewTab('https://mystery.knightlab.com/')">Knight Lab Mystery 🌐</button>
+    <button onclick="openNewTab('https://www.codedex.io/home')">Codedex 🌐</button>
+    <button onclick="openNewTab('https://coddy.tech/journeys/python/fundamentals')">Coddy Python 🌐</button>
+    <button onclick="openNewTab('https://buzzcoder.com/')">BuzzCoder 🌐</button>
+    <button onclick="openNewTab('https://codingforkids.io/en/')">Coding for Kids 🌐</button>
+    <button onclick="openNewTab('https://codepip.com/')">Codepip 🌐</button>
+    <button onclick="openNewTab('https://game.rodocodo.com/hour-of-code/')">Rodocodo 🌐</button>
+  </div>
+
+  <iframe id="gameFrame"></iframe>
+
+  <script>
+    function loadInFrame(url) {
+      document.getElementById("gameFrame").src = url;
+    }
+
+    function openNewTab(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
